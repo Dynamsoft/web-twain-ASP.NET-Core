@@ -14,8 +14,13 @@ The samples demonstrate how to write a simple web document scanning app using [D
     dotnet run
     ```
 6. Connect scanners to your PC and open **localhost:5000** to scan documents in web browsers.
+![web document scanning on ubuntu](http://www.codepool.biz/wp-content/uploads/2016/11/dotnet-core-linux.PNG)
+
+## Blog
+[Cross-platform Web Document Scanning with ASP.NET Core][5]
 
 [1]:http://www.dynamsoft.com/Products/WebTWAIN_Overview.aspx
 [2]:https://www.microsoft.com/net/core#windowsvs2015
 [3]:https://www.microsoft.com/net/download/core
 [4]:http://www.dynamsoft.com/Downloads/WebTWAIN_Download.aspx
+[5]:http://www.codepool.biz/web-document-scanning-dotnet-core.html
