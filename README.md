@@ -8,6 +8,8 @@ This is a sample project that guides developer to integrate Dynamic Web TWAIN wi
 
 We recommend developers to open this demo project with Visual Studio under Windows environment. 
 
+![demo_screenshot](https://www.imgurupload.com/uploads/20200917/7d3504e5ce43c9dca0ad7b6103defaedca1cb1f6.png)
+
 ## Requirement
 
 ```
