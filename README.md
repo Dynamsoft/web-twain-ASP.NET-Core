@@ -2,7 +2,9 @@
 
 ## Introduction
 
-This is a sample project that guides developer to integrate  Dynamic Web TWAIN with .NET Core MVC.  
+Dynamic Web TWAIN is a document scanning SDK that help developers to build online document scanning web application catering to TWAIN standard. For more details about the product, visit https://www.dynamsoft.com/Products/WebTWAIN_Overview.aspx
+
+This is a sample project that guides developer to integrate Dynamic Web TWAIN with .NET Core MVC.  
 
 We recommend developers to open this demo project with Visual Studio under Windows environment. 
 
@@ -13,9 +15,7 @@ We recommend developers to open this demo project with Visual Studio under Windo
 Dynamic Web TWAIN: 16.1.1
 ```
 
-## Configure
-
-Put your Dynamic Web TWAIN resource files to `/wwwroot/lib/dwt`, before running the app. If you do not install Dynamic Web TWAIN, visit http://www.dynamsoft.com/Downloads/WebTWAIN_Download.aspx to download
+Before running the app, you should put your Dynamic Web TWAIN resource files to `/wwwroot/lib/dwt`. If you do not install Dynamic Web TWAIN, visit http://www.dynamsoft.com/Downloads/WebTWAIN_Download.aspx to download. If you have installed it, they can be found under `Resources` folder of your Dynamic Web TWAIN installation path (usually it is `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK <version number>`)
 
 ## Build & Run
 
