@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Dynamic Web TWAIN is a document scanning SDK that help developers to build online document scanning web application catering to TWAIN standard. For more details about the product, visit https://www.dynamsoft.com/Products/WebTWAIN_Overview.aspx
+**Dynamic Web TWAIN** is a document scanning SDK that help developers to build online document scanning web application catering to TWAIN standard. For more details about the product, visit https://www.dynamsoft.com/Products/WebTWAIN_Overview.aspx
 
 This is a sample project that guides developer to integrate Dynamic Web TWAIN with .NET Core MVC.  
 
