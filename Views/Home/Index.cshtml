@@ -1,0 +1,87 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container-fluid">
+    <div id="control-panel">
+        <button class="btn btn-primary" onclick="AcquireImage()">Scan</button>
+        <br />
+        <button class="btn btn-outline-secondary" onclick="Upload()">Upload</button>
+        <input type="radio" value="jpg" name="format"/>JPG
+        <input type="radio" value="pdf" name="format"/>PDF
+        <input type="radio" value="tif" name="format"/>TIFF
+        <label for="filename-input">File Name: </label>
+        <input type="text" id="filename-input"/>
+    </div>
+    <div id="dwt-container">
+
+    </div>
+</div>
+
+<!-- DWT script here -->
+<script src="~/lib/dwt/dynamsoft.webtwain.initiate.js"></script>
+<script src="~/lib/dwt/dynamsoft.webtwain.config.js"></script>
+<script>
+    function AcquireImage() {
+        const DWObj = Dynamsoft.WebTwainEnv.GetWebTwain('dwt-container')
+        if (DWObj) {
+            if (DWObj.UseLocalService) {
+                DWObj.SelectSource(function () {
+                    var OnAcquireImageSuccess = OnAcquireImageFailure = function () {
+                        DWObj.CloseSource()
+                    }
+                    DWObj.OpenSource()
+                    DWObj.IfDisableSourceAfterAcquire = true
+                    DWObj.AcquireImage(OnAcquireImageSuccess, OnAcquireImageFailure)
+                }, function () {
+                    console.log('SelectSource failed')
+                })
+            } else {
+                DWObj.LoadImageEx('', -1)
+            }
+        }
+    }
+    function Upload() {
+        const host = location.hostname
+        const protocol = location.protocol
+        const uploadPath = '/api/File'
+        let uploadFileName = document.getElementById('filename-input').value
+        const port = location.port || (protocol === 'https:' ? 443 : 80)
+
+        var formatSelector = document.getElementsByName('format')
+        let format = (selector => {
+            let select = ''
+            selector.forEach(e => {
+                if (e.checked) {
+                    select = e.value
+                }
+            })
+            uploadFileName = uploadFileName + '.' + select
+            switch (select) {
+                case 'jpg': { return Dynamsoft.EnumDWT_ImageType.IT_JPG }
+                case 'pdf': { return Dynamsoft.EnumDWT_ImageType.IT_PDF }
+                case 'tif': { return Dynamsoft.EnumDWT_ImageType.IT_TIF }
+            }
+        })(formatSelector)
+
+        let uploadFormat = Dynamsoft.EnumDWT_UploadDataFormat.Binary
+
+        const DWObj = Dynamsoft.WebTwainEnv.GetWebTwain('dwt-container')
+        if (DWObj) {
+            DWObj.HTTPPort = port
+            DWObj.IfSSL = true
+            let indices = DWObj.SelectedImagesIndices
+            DWObj.HTTPUpload(
+                protocol + '//' + host + ':' + port + uploadPath,
+                indices,
+                format,
+                uploadFormat,
+                uploadFileName,
+                () => { alert('success') },
+                (errCode, errStr, res) => {
+                    console.error(`${errCode}: ${errStr}. Server return: ${ res }`)
+                }
+            )
+        }
+    }
+</script>

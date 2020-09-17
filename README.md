@@ -1,26 +1,27 @@
-# Dynamic Web TWAIN with ASP.NET Core 
+# dotnet-core-dwt
 
-The samples demonstrate how to write a simple web document scanning app using [Dynamic Web TWAIN][1] and [ASP.NET Core][2].
+## Introduction
 
-## Getting Started
-1. Install [.NET Core][3] for Windows, Linux, and macOS.
-2. Install [scanning service][4] for Windows, Linux, and macOS.
-3. Download the source code.
-4. Change directory to **helloworld** or **helloworld-mvc**.
-5. Run the project:
+Dynamic Web TWAIN is a document scanning SDK that help developers to build online document scanning web application catering to TWAIN standard. For more details about the product, visit https://www.dynamsoft.com/Products/WebTWAIN_Overview.aspx
 
-    ```
-    dotnet restore
-    dotnet run
-    ```
-6. Connect scanners to your PC and open **localhost:5000** to scan documents in web browsers.
-![web document scanning on ubuntu](http://www.codepool.biz/wp-content/uploads/2016/11/dotnet-core-linux.PNG)
+This is a sample project that guides developer to integrate Dynamic Web TWAIN with .NET Core MVC.  
 
-## Blog
-[Cross-platform Web Document Scanning with ASP.NET Core][5]
+We recommend developers to open this demo project with Visual Studio under Windows environment. 
 
-[1]:http://www.dynamsoft.com/Products/WebTWAIN_Overview.aspx
-[2]:https://www.microsoft.com/net/core#windowsvs2015
-[3]:https://www.microsoft.com/net/download/core
-[4]:http://www.dynamsoft.com/Downloads/WebTWAIN_Download.aspx
-[5]:http://www.codepool.biz/web-document-scanning-dotnet-core.html
+## Requirement
+
+```
+.Net Core SDK: 3.1
+Dynamic Web TWAIN: 16.1.1
+```
+
+Before running the app, you should put your Dynamic Web TWAIN resource files to `/wwwroot/lib/dwt`. If you do not install Dynamic Web TWAIN, visit http://www.dynamsoft.com/Downloads/WebTWAIN_Download.aspx to download. If you have installed it, they can be found under `Resources` folder of your Dynamic Web TWAIN installation path (usually it is `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK <version number>`)
+
+## Build & Run
+
+```
+dotnet restore
+dotnet run
+```
+
+Then, visit `https://localhost:5001` or `http://localhost:5000` to try the demo.
