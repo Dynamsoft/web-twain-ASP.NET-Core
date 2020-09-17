@@ -15,7 +15,7 @@ Dynamic Web TWAIN: 16.1.1
 
 ## Configure
 
-Put your Dynamic Web TWAIN resource files to `/wwwroot/lib/dwt`, before running the app.
+Put your Dynamic Web TWAIN resource files to `/wwwroot/lib/dwt`, before running the app. If you do not install Dynamic Web TWAIN, visit (http://www.dynamsoft.com/Downloads/WebTWAIN_Download.aspx)[http://www.dynamsoft.com/Downloads/WebTWAIN_Download.aspx] to download
 
 ## Build & Run
 
