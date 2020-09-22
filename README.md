@@ -1,4 +1,4 @@
-# dotnet-core-dwt
+# DotNet Core Document Scanning
 
 ## Introduction
 
@@ -27,3 +27,6 @@ dotnet run
 ```
 
 Then, visit `https://localhost:5001` or `http://localhost:5000` to try the demo.
+
+## Blog
+[Building Cross-platform DotNet Core Document Scanning with MVC](https://www.dynamsoft.com/codepool/asp-dotnet-core-document-scanning.html)
