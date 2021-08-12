@@ -1,6 +1,6 @@
-// @2020/06/18
+// @2021/04/20
 
-* Product: Dynamsoft Web TWAIN SDK v16.x
+* Product: Dynamsoft Web TWAIN SDK v17.x
 * Summary: this Readme.txt is to help you understand the files under the Resources folder
 
 ====== Dynamsoft JavaScript Libraries ======
@@ -33,10 +33,13 @@ This file contains the functionalities of the Webcam addon. You're not supposed 
 - addon/dynamsoft.upload.js
 This file contains the functionalities of the Dynamsoft Upload Module. You're not supposed to change it without consulting the Dynamsoft Support Team.
 
-- src/dynamsoft.imagecore-1.6.x.wasm & dynamsoft.imageio-1.6.x.wasm & dynamsoft.imageio.js & dynamsoft.imageio_wasm-1.6.x.js & dynamsoft.imageProc-1.6.x.wasm
+- dynamsoft.webtwain.addon.camera.js
+This file contains the functionalities of the Camera addon. You're not supposed to change it without consulting the Dynamsoft Support Team.
+
+- src/dynamsoft.imagecore-1.7.x.wasm & dynamsoft.imageio-1.7.x.wasm & dynamsoft.imageio.js & dynamsoft.imageio_wasm-1.7.x.js & dynamsoft.imageProc-1.7.x.wasm & dynamsoft.crypto-1.7.x.wasm & dynamsoft.lts.js
 These files contain functionalities for image input & output + decode & encode.
 
-- src/dynamsoft.pdfReader-1.6.x.wasm & dynamsoft.pdfWriter-1.6.x.wasm
+- src/dynamsoft.pdfReader-1.7.x.wasm & dynamsoft.pdfWriter-1.7.x.wasm
 These files contain functionalities for PDF reading & writing.
 
 - src/dynamsoft.viewer.css & dynamsoft.viewer.js
@@ -52,7 +55,7 @@ Under dist/
 
 Under this directory are the installers for the Dynamsoft Service which needs to be manually installed on each client machine that uses the Dynamic Web TWAIN library as a service.
 
-- DynamsoftServiceSetupTrial.msi
+- DynamsoftServiceSetup.msi
 For Windows
 
 - DynamsoftServiceSetup.pkg
@@ -60,6 +63,8 @@ For macOS
 
 - DynamsoftServiceSetup.rpm
 - DynamsoftServiceSetup.deb
+- DynamsoftServiceSetup-arm64.deb
+- DynamsoftServiceSetup-mips64el.deb
 For Linux
 
 There is also a file for the license declaration

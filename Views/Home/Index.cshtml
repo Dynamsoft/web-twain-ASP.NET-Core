@@ -13,17 +13,34 @@
         <label for="filename-input">File Name: </label>
         <input type="text" id="filename-input"/>
     </div>
-    <div id="dwt-container">
-
-    </div>
+    <div id="dwt-container"></div>
 </div>
 
 <!-- DWT script here -->
 <script src="~/lib/dwt/dynamsoft.webtwain.initiate.js"></script>
 <script src="~/lib/dwt/dynamsoft.webtwain.config.js"></script>
 <script>
+    var DWObj;
+    var viewerWidth = 960, viewerHeight = 960;
+    var containerName = 'dwt-container';
+    Dynamsoft.DWT.ResourcesPath = 'lib/dwt';
+    Dynamsoft.DWT.ProductKey = "LICENSE-KEY"; // https://www.dynamsoft.com/customer/license/trialLicense?product=dwt
+    function initDWT() {
+            Dynamsoft.DWT.UseLocalService = true;
+            Dynamsoft.DWT.AutoLoad = true;
+            Dynamsoft.DWT.Containers = [{ ContainerId: containerName, Width: viewerWidth, Height: viewerHeight }];
+            Dynamsoft.DWT.RegisterEvent('OnWebTwainReady', function () {
+                DWObj = Dynamsoft.DWT.GetWebTwain(containerName);
+                if (DWObj) {
+                    DWObj.Width = viewerWidth;
+                    DWObj.Height = viewerHeight;
+                    DWObj.MouseShape = true;
+                    @* addThumbnailViewer(); *@
+                }
+            });
+        }
+    initDWT(); 
     function AcquireImage() {
-        const DWObj = Dynamsoft.WebTwainEnv.GetWebTwain('dwt-container')
         if (DWObj) {
             if (DWObj.UseLocalService) {
                 DWObj.SelectSource(function () {
@@ -58,15 +75,14 @@
             })
             uploadFileName = uploadFileName + '.' + select
             switch (select) {
-                case 'jpg': { return Dynamsoft.EnumDWT_ImageType.IT_JPG }
-                case 'pdf': { return Dynamsoft.EnumDWT_ImageType.IT_PDF }
-                case 'tif': { return Dynamsoft.EnumDWT_ImageType.IT_TIF }
+                case 'jpg': { return Dynamsoft.DWT.EnumDWT_ImageType.IT_JPG }
+                case 'pdf': { return Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF }
+                case 'tif': { return Dynamsoft.DWT.EnumDWT_ImageType.IT_TIF }
             }
         })(formatSelector)
 
-        let uploadFormat = Dynamsoft.EnumDWT_UploadDataFormat.Binary
+        let uploadFormat = Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary
 
-        const DWObj = Dynamsoft.WebTwainEnv.GetWebTwain('dwt-container')
         if (DWObj) {
             DWObj.HTTPPort = port
             DWObj.IfSSL = true

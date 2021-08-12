@@ -2,18 +2,18 @@
 // Dynamsoft JavaScript Library for Basic Initiation of Dynamic Web TWAIN
 // More info on DWT: http://www.dynamsoft.com/Products/WebTWAIN_Overview.aspx
 //
-// Copyright 2020, Dynamsoft Corporation 
+// Copyright 2021, Dynamsoft Corporation 
 // Author: Dynamsoft Team
-// Version: 16.1.1
+// Version: 17.1
 //
 /// <reference path="dynamsoft.webtwain.initiate.js" />
-var Dynamsoft = Dynamsoft || { WebTwainEnv: {} };
+var Dynamsoft = Dynamsoft || { DWT: {} };
 
 ///
-Dynamsoft.WebTwainEnv.AutoLoad = true;
+Dynamsoft.DWT.AutoLoad = true;
 
 ///
-Dynamsoft.WebTwainEnv.Containers = [{ ContainerId:'dwt-container', Width:720, Height:480}];
+Dynamsoft.DWT.Containers = [{ContainerId:'dwtcontrolContainer', Width:270, Height:350}];
 
 /////////////////////////////////////////////////////////////////////////////////////
 //  WARNING:  The productKey in this file is protected by copyright law            //
@@ -24,21 +24,21 @@ Dynamsoft.WebTwainEnv.Containers = [{ ContainerId:'dwt-container', Width:720, He
 //  decompile, disassemble, or modify the productKey .                             //
 /////////////////////////////////////////////////////////////////////////////////////
 /// If you need to use multiple keys on the same server, you can combine keys and write like this 
-/// Dynamsoft.WebTwainEnv.ProductKey = 'key1;key2;key3';
-Dynamsoft.WebTwainEnv.ProductKey = 't01016QAAADyBe7yfb9oPaRKoDodUi2D6w3Dj/XeSforvLiBX6PXItwyqx3NL/4Uso1U/t4Gol58RCjB9B1q+RjxJ2qOVHa1eGzRmGbzga3PGGn1/tDAWpk/DKsyhQmO9F1PDDdxIL+c=';
+/// Dynamsoft.DWT.ProductKey = 'key1;key2;key3';
+Dynamsoft.DWT.ProductKey = 't00996QAAAFOf0Y+yrXQaZQZizgHWjLWhKLIixbC+XIiouFQNmdxFtYfO93OOdb5JbO/hRcJRIo8iLpNuCGruMCfk/LbE5MRB+a74hcaluaJGMTpnU8OUYTyFyUo34ttmWR9mJS62';
 
 ///
-Dynamsoft.WebTwainEnv.ResourcesPath = '/lib/dwt';
+// Dynamsoft.DWT.ResourcesPath = 'Resources';
 
 ///
-Dynamsoft.WebTwainEnv.IfAddMD5InUploadHeader = false;
+Dynamsoft.DWT.IfAddMD5InUploadHeader = false;
 
 ///
-Dynamsoft.WebTwainEnv.IfConfineMaskWithinTheViewer = false;
+Dynamsoft.DWT.IfConfineMaskWithinTheViewer = false;
 
 
 ///
-/*Dynamsoft.WebTwainEnv.CustomizableDisplayInfo = {
+/*Dynamsoft.DWT.CustomizableDisplayInfo = {
 
     errorMessages: {
 
@@ -101,7 +101,7 @@ Dynamsoft.WebTwainEnv.IfConfineMaskWithinTheViewer = false;
             'rotateright': 'Rotate Right',
             'deskew': 'Deskew',
             'crop': 'Crop Selected Area',
-            'erase': 'Erase Selected Area',
+            'cut': 'Cut Selected Area',
             'changeimagesize': 'Change Image Size',
             'flip': 'Flip Image',
             'mirror': 'Mirror Image',
@@ -133,7 +133,7 @@ Dynamsoft.WebTwainEnv.IfConfineMaskWithinTheViewer = false;
 
 
 /// All callbacks are defined in the dynamsoft.webtwain.install.js file, you can customize them.
-// Dynamsoft.WebTwainEnv.RegisterEvent('OnWebTwainReady', function(){
+// Dynamsoft.DWT.RegisterEvent('OnWebTwainReady', function(){
 // 		// webtwain has been inited
 // });
 
