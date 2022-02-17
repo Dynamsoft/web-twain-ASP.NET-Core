@@ -8,8 +8,8 @@ This is a sample project that guides developer to integrate [Dynamic Web TWAIN](
 
 ## Requirement
 
-- .Net Core SDK: 3.1
-- Dynamic Web TWAIN v17.1
+- .Net Core SDK: 6.0
+- Dynamic Web TWAIN v17.2
 
 ## Usage
 1. Put Dynamic Web TWAIN resource files (`<Dynamic Web TWAIN installation path>/Resources>`) to `/wwwroot/lib/dwt`.

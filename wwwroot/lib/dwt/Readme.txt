@@ -1,4 +1,4 @@
-// @2021/04/20
+// @2022/01/20
 
 * Product: Dynamsoft Web TWAIN SDK v17.x
 * Summary: this Readme.txt is to help you understand the files under the Resources folder
@@ -36,10 +36,10 @@ This file contains the functionalities of the Dynamsoft Upload Module. You're no
 - dynamsoft.webtwain.addon.camera.js
 This file contains the functionalities of the Camera addon. You're not supposed to change it without consulting the Dynamsoft Support Team.
 
-- src/dynamsoft.imagecore-1.7.x.wasm & dynamsoft.imageio-1.7.x.wasm & dynamsoft.imageio.js & dynamsoft.imageio_wasm-1.7.x.js & dynamsoft.imageProc-1.7.x.wasm & dynamsoft.crypto-1.7.x.wasm & dynamsoft.lts.js
+- src/dynamsoft.imagecore-1.7.x.wasm & dynamsoft.imageio-1.7.x.wasm & dynamsoft.imageio.js & dynamsoft.imageio_wasm-1.7.x.js & dynamsoft.imageProc-1.7.x.wasm & dynamsoft.imageProc-sn-1.7.x.wasm & dynamsoft.crypto-1.7.x.wasm & dynamsoft.lts.js
 These files contain functionalities for image input & output + decode & encode.
 
-- src/dynamsoft.pdfReader-1.7.x.wasm & dynamsoft.pdfWriter-1.7.x.wasm
+- src/dynamsoft.pdfReader-1.7.x.wasm & dynamsoft.pdfWriter-1.7.x.wasm & dynamsoft.pdfReader_wasm-1.7.x.js
 These files contain functionalities for PDF reading & writing.
 
 - src/dynamsoft.viewer.css & dynamsoft.viewer.js

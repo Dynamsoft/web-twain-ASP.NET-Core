@@ -1,19 +1,18 @@
-﻿//
+//
 // Dynamsoft JavaScript Library for Basic Initiation of Dynamic Web TWAIN
 // More info on DWT: http://www.dynamsoft.com/Products/WebTWAIN_Overview.aspx
 //
-// Copyright 2021, Dynamsoft Corporation 
+// Copyright 2022, Dynamsoft Corporation 
 // Author: Dynamsoft Team
-// Version: 17.1
+// Version: 17.2
 //
 /// <reference path="dynamsoft.webtwain.initiate.js" />
 var Dynamsoft = Dynamsoft || { DWT: {} };
 
 ///
 Dynamsoft.DWT.AutoLoad = true;
-
 ///
-Dynamsoft.DWT.Containers = [{ContainerId:'dwtcontrolContainer', Width:270, Height:350}];
+Dynamsoft.DWT.Containers = [{ ContainerId: 'dwtcontrolContainer', Width: 270, Height: 350 }];
 
 /////////////////////////////////////////////////////////////////////////////////////
 //  WARNING:  The productKey in this file is protected by copyright law            //
@@ -25,17 +24,17 @@ Dynamsoft.DWT.Containers = [{ContainerId:'dwtcontrolContainer', Width:270, Heigh
 /////////////////////////////////////////////////////////////////////////////////////
 /// If you need to use multiple keys on the same server, you can combine keys and write like this 
 /// Dynamsoft.DWT.ProductKey = 'key1;key2;key3';
-Dynamsoft.DWT.ProductKey = 't00996QAAAFOf0Y+yrXQaZQZizgHWjLWhKLIixbC+XIiouFQNmdxFtYfO93OOdb5JbO/hRcJRIo8iLpNuCGruMCfk/LbE5MRB+a74hcaluaJGMTpnU8OUYTyFyUo34ttmWR9mJS62';
+/// To get a free trial, please visit https://www.dynamsoft.com/customer/license/trialLicense?product=dwt&utm_source=installer.
+Dynamsoft.DWT.ProductKey = 't01006QAAAHoXg7peBCu+0a8WzKlXWp55cRAjwO7HqARfRsXzYK7N3KD6zRRG8HtnfrUfwt4OIpJMohsA9Yj2d4hZCGtbddHaoH5X7ELn0pxeoxidsznc1GEsuclKMyrUaO891fMvsQ==';
 
 ///
-// Dynamsoft.DWT.ResourcesPath = 'Resources';
+//Dynamsoft.DWT.ResourcesPath = 'Resources';
 
 ///
 Dynamsoft.DWT.IfAddMD5InUploadHeader = false;
 
 ///
 Dynamsoft.DWT.IfConfineMaskWithinTheViewer = false;
-
 
 ///
 /*Dynamsoft.DWT.CustomizableDisplayInfo = {
@@ -74,15 +73,15 @@ Dynamsoft.DWT.IfConfineMaskWithinTheViewer = false;
     customProgressText: {
 
         // html5 event
-        upload: 'uploading...',
+        upload: 'Uploading...',
         download: 'Downloading...',
         load: 'Loading...',
-        decode: 'Decoding...',
-        decodeTIFF: 'Decoding tiff...',
-        decodePDF: 'Decoding pdf...',
-        encode: 'Encoding...',
-        encodeTIFF: 'Encoding tiff...',
-        encodePDF: 'Encoding pdf...',
+        decode: 'Processing...',
+        decodeTIFF: 'Processing tiff...',
+        decodePDF: 'Processing pdf...',
+        encode: 'Processing...',
+        encodeTIFF: 'Processing tiff...',
+        encodePDF: 'Processing pdf...',
 
         // image control
         canvasLoading: 'Loading ...'
@@ -121,8 +120,8 @@ Dynamsoft.DWT.IfConfineMaskWithinTheViewer = false;
             'removeall': 'Remove All Images',
             'removeselected': 'Remove All Selected Images'
         }
-	},
-	
+    },
+
     dialogText: {
         dlgRotateAnyAngle: ['Angle :', 'Interpolation:', 'Keep size', '  OK  ', 'Cancel'],
         dlgChangeImageSize: ['New Height :', 'New Width :', 'Interpolation method:', '  OK  ', 'Cancel'],
