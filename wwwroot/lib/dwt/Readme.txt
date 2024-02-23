@@ -1,6 +1,6 @@
-// @2022/01/20
+// @2023/04/25
 
-* Product: Dynamsoft Web TWAIN SDK v17.x
+* Product: Dynamic Web TWAIN SDK v18.x
 * Summary: this Readme.txt is to help you understand the files under the Resources folder
 
 ====== Dynamsoft JavaScript Libraries ======
@@ -14,6 +14,8 @@ This file is the core of the Dynamic Web TWAIN library. You're not supposed to c
 - dynamsoft.webtwain.install.js
 This file is used to configure the dialogs which are shown when the Dynamic Web TWAIN library is not installed or needs to be upgraded. This file is already referenced inside the dynamsoft.webtwain.initiate.js
 
+- src/dynamsoft.lts.js
+This file contains the functionalities for Dynamsoft License Server.
 
 - addon/dynamsoft.webtwain.addon.barcode.js
 This file contains the functionalities of the Barcode addon. You're not supposed to change it without consulting the Dynamsoft Support Team.
@@ -33,16 +35,10 @@ This file contains the functionalities of the Webcam addon. You're not supposed 
 - addon/dynamsoft.upload.js
 This file contains the functionalities of the Dynamsoft Upload Module. You're not supposed to change it without consulting the Dynamsoft Support Team.
 
-- dynamsoft.webtwain.addon.camera.js
-This file contains the functionalities of the Camera addon. You're not supposed to change it without consulting the Dynamsoft Support Team.
+- src/dynamsoft.webtwain.activex.js
+This file contains the functionalities of the ActiveX edition
 
-- src/dynamsoft.imagecore-1.7.x.wasm & dynamsoft.imageio-1.7.x.wasm & dynamsoft.imageio.js & dynamsoft.imageio_wasm-1.7.x.js & dynamsoft.imageProc-1.7.x.wasm & dynamsoft.imageProc-sn-1.7.x.wasm & dynamsoft.crypto-1.7.x.wasm & dynamsoft.lts.js
-These files contain functionalities for image input & output + decode & encode.
-
-- src/dynamsoft.pdfReader-1.7.x.wasm & dynamsoft.pdfWriter-1.7.x.wasm & dynamsoft.pdfReader_wasm-1.7.x.js
-These files contain functionalities for PDF reading & writing.
-
-- src/dynamsoft.viewer.css & dynamsoft.viewer.js
+- src/dynamsoft.webtwain.viewer.css & dynamsoft.webtwain.viewer.js
 These files are for buidling the UI of the Dynamic Web TWAIN library
 
 - src/dynamsoft.webtwain.css
@@ -64,7 +60,6 @@ For macOS
 - DynamsoftServiceSetup.rpm
 - DynamsoftServiceSetup.deb
 - DynamsoftServiceSetup-arm64.deb
-- DynamsoftServiceSetup-mips64el.deb
 For Linux
 
 There is also a file for the license declaration

@@ -24,7 +24,7 @@
     var viewerWidth = 960, viewerHeight = 960;
     var containerName = 'dwt-container';
     Dynamsoft.DWT.ResourcesPath = 'lib/dwt';
-    Dynamsoft.DWT.ProductKey = "LICENSE-KEY"; // https://www.dynamsoft.com/customer/license/trialLicense?product=dwt
+    Dynamsoft.DWT.ProductKey = "DLS2eyJoYW5kc2hha2VDb2RlIjoiMjAwMDAxLTE2NDk4Mjk3OTI2MzUiLCJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInNlc3Npb25QYXNzd29yZCI6IndTcGR6Vm05WDJrcEQ5YUoifQ=="; // https://www.dynamsoft.com/customer/license/trialLicense?product=dwt
     function initDWT() {
             Dynamsoft.DWT.UseLocalService = true;
             Dynamsoft.DWT.AutoLoad = true;
@@ -43,16 +43,13 @@
     function AcquireImage() {
         if (DWObj) {
             if (DWObj.UseLocalService) {
-                DWObj.SelectSource(function () {
-                    var OnAcquireImageSuccess = OnAcquireImageFailure = function () {
-                        DWObj.CloseSource()
-                    }
-                    DWObj.OpenSource()
-                    DWObj.IfDisableSourceAfterAcquire = true
-                    DWObj.AcquireImage(OnAcquireImageSuccess, OnAcquireImageFailure)
-                }, function () {
-                    console.log('SelectSource failed')
-                })
+                DWObj.SelectSourceAsync().then(function () {
+                    return DWObj.AcquireImageAsync({
+                        IfCloseSourceAfterAcquire: true 
+                    });
+                }).catch(function (exp) {
+                    alert(exp.message);
+                });
             } else {
                 DWObj.LoadImageEx('', -1)
             }

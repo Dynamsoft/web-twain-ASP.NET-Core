@@ -1,10 +1,10 @@
 //
 // Dynamsoft JavaScript Library for Basic Initiation of Dynamic Web TWAIN
-// More info on DWT: http://www.dynamsoft.com/Products/WebTWAIN_Overview.aspx
+// More info on Dynamic Web TWAIN: http://www.dynamsoft.com/Products/WebTWAIN_Overview.aspx
 //
-// Copyright 2022, Dynamsoft Corporation 
+// Copyright 2023, Dynamsoft Corporation 
 // Author: Dynamsoft Team
-// Version: 17.2
+// Version: 18.4.2
 //
 /// <reference path="dynamsoft.webtwain.initiate.js" />
 var Dynamsoft = Dynamsoft || { DWT: {} };
@@ -12,7 +12,7 @@ var Dynamsoft = Dynamsoft || { DWT: {} };
 ///
 Dynamsoft.DWT.AutoLoad = true;
 ///
-Dynamsoft.DWT.Containers = [{ ContainerId: 'dwtcontrolContainer', Width: 270, Height: 350 }];
+Dynamsoft.DWT.Containers = [{ WebTwainId: '', ContainerId: 'dwtcontrolContainer', Width: 350, Height: 380 }];
 
 /////////////////////////////////////////////////////////////////////////////////////
 //  WARNING:  The productKey in this file is protected by copyright law            //
@@ -25,7 +25,7 @@ Dynamsoft.DWT.Containers = [{ ContainerId: 'dwtcontrolContainer', Width: 270, He
 /// If you need to use multiple keys on the same server, you can combine keys and write like this 
 /// Dynamsoft.DWT.ProductKey = 'key1;key2;key3';
 /// To get a free trial, please visit https://www.dynamsoft.com/customer/license/trialLicense?product=dwt&utm_source=installer.
-Dynamsoft.DWT.ProductKey = 't01006QAAAHoXg7peBCu+0a8WzKlXWp55cRAjwO7HqARfRsXzYK7N3KD6zRRG8HtnfrUfwt4OIpJMohsA9Yj2d4hZCGtbddHaoH5X7ELn0pxeoxidsznc1GEsuclKMyrUaO891fMvsQ==';
+Dynamsoft.DWT.ProductKey = 't0114QAEAAJ7eKmBG2/cciWaP3yl8+VrsiVgd8g40VrhawB2qn1evC3qR0wzo3eZdhWykSUFjqexPsNSvzD4cku678FCK8Edbxi9Tmfa1TzkHDDJOl4IHh8xWa8pGjntupcb4qTJR+TBvdrQZKYaYVS7tuD/q';
 
 ///
 //Dynamsoft.DWT.ResourcesPath = 'Resources';
@@ -34,9 +34,8 @@ Dynamsoft.DWT.ProductKey = 't01006QAAAHoXg7peBCu+0a8WzKlXWp55cRAjwO7HqARfRsXzYK7
 Dynamsoft.DWT.IfAddMD5InUploadHeader = false;
 
 ///
-Dynamsoft.DWT.IfConfineMaskWithinTheViewer = false;
-
-///
+///true will make our processing icons align with the initiated div container, otherwise align with the whole page instead
+Dynamsoft.DWT.IfConfineMaskWithinTheViewer = true;
 /*Dynamsoft.DWT.CustomizableDisplayInfo = {
 
     errorMessages: {
@@ -83,6 +82,7 @@ Dynamsoft.DWT.IfConfineMaskWithinTheViewer = false;
         encodeTIFF: 'Processing tiff...',
         encodePDF: 'Processing pdf...',
 
+        transfer: 'Transferring...',
         // image control
         canvasLoading: 'Loading ...'
     },
